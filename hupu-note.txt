@@ -36,9 +36,8 @@ fisp release -w  ／／启动监听
 sh devToQiuTest.sh 启动devToQiuTest.sh
 sudo chmod -R 777 /etc/hosts //修改文件为可写入
 m站服务器
-带端口号的方法：ssh -p 5277 root@192.162.9.181
+带端口号的方法：ssh -p 5277 root@132.162.9.181
 ssh root@192.148.9.131
-用户名/密码:root/hoopchina
 
 
 //cat用法＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊／
