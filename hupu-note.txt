@@ -1,0 +1,208 @@
+https://github.com/hakobera/nvmw
+http://blog.csdn.net/isaisai/article/details/45099173
+https://github.com/hakobera/nvmw
+http://fex-team.github.io/fis-site/#about-sec
+
+前端规范：https://github.com/HUPU-frontend/mobile-summary/wiki
+npm config set registry https://registry.npm.taobao.org --global
+npm config set disturl https://npm.taobao.org/dist --global
+NVM安装：
+用命令：
+1、curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+2、打开vi ~/.bash_profile 
+添加：
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+执行nvm看看是否安装成功
+Homebrew安装nvm会有问题
+
+
+nvm install v0.12.7
+nvm install v5.5.0
+nvm use 0  // 切换版本
+npm i -g fis fis-plus
+//安装完java后执行
+brew install homebrew/php/php56-amqp
+//成功后
+启动：fisp server start
+
+fisp release -omp  ／／编译
+fisp release -w  ／／启动监听
+//安装fis出错可以使用：npm install fis -g --registry=http://registry.npm.taobao.org/ --disturl=https://npm.taobao.org/dist
+
+
+
+从左往右依次判断，当值为true则继续，当值为false则返回此值  //var attr = true && 4 &&"aaa";
+sh devToQiuTest.sh 启动devToQiuTest.sh
+sudo chmod -R 777 /etc/hosts //修改文件为可写入
+m站服务器
+带端口号的方法：ssh -p 5277 root@192.162.9.181
+ssh root@192.148.9.131
+用户名/密码:root/hoopchina
+
+
+//cat用法＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊／
+cat主要有三大功能：
+1.一次显示整个文件。$ cat filename
+2.从键盘创建一个文件。$ cat > filename  
+   只能创建新文件,不能编辑已有文件.
+3.将几个文件合并为一个文件： $cat file1 file2 > file
+参数：
+-n 或 --number 由 1 开始对所有输出的行数编号
+-b 或 --number-nonblank 和 -n 相似，只不过对于空白行不编号
+-s 或 --squeeze-blank 当遇到有连续两行以上的空白行，就代换为一行的空白行
+-v 或 --show-nonprinting
+例：
+把 textfile1 的档案内容加上行号后输入 textfile2 这个档案里
+cat -n textfile1 > textfile2
+
+把 textfile1 和 textfile2 的档案内容加上行号（空白行不加）之后将内容附加到 textfile3 里。
+cat -b textfile1 textfile2 >> textfile3
+ 
+把test.txt文件扔进垃圾箱，赋空值test.txt
+cat /dev/null > /etc/test.txt  
+／＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊／
+
+svn拉取代码mac：
+svn up
+svn co http://192.168.8.245/usvn/svn/huputv_UI/trunk huputv_ui
+/**************************git***************/
+git stash
+git stash pop
+
+
+Git创建Develop分支的命令：
+   git checkout -b develop master
+git push origin develop
+
+git log
+git reset --hard d424732d1e0fade82e74b5f9451ff78506509bce 
+//删除文件夹下的所有 .git 文件
+ find . -name ".git" | xargs rm -Rf
+
+
+将Develop分支发布到Master分支的命令：
+    　　# 切换到Master分支
+    　　git checkout master
+    　　# 对Develop分支进行合并
+    　　git merge --no-ff develop
+
+/**************************************************/
+git br -d app1.0.12_bug   //
+
+
+event.stopPropagation();
+event.preventDefault();
+
+/************************************************************/
+linux常用语法：
+  dd:删除游标所在的一整行(常用);
+  touch filename  就创建了一个文件名为filename的空文本文件 
+  rm -f file1 删除一个叫做 'file1' 的文件'
+  rm -rf dir1 删除一个叫做 'dir1' 的目录并同时删除其内容 
+  光标移动:
+   h或向左方向键（←）：光标向左移动一个字符，数字和字母合起来连用，5h表示向左移动5个字符，以下三个一次类推
+   j或向下方向键（↓）
+   k或向上方向键（↑）
+   l或向右方向键（→）:光标向右移动一个字符
+   按「G」：移动到文章的最后。
+   按「o」进入插入模式后，在文本最后插入新的一行，从行首开始输入文字。 
+   0：光标移动到这一行的最前面(常用)
+   $：光标移动到这一行的最后面(常用)
+   G ：移动到文件的最后一行(常用)
+   e!: 将文件还原到最原始的状态
+   ZZ: 若文件没有更改，则不存储离开，若文件已经更改，则存储后离开
+   ctrl+b：光标向上移动一页
+   ctrl+d：光标向下移动半页
+   ctrl+u：光标向上移动半页
+删除文本中的内容行数：
+vi filename   
+G 
+删除所有内容(先用G转到文件尾) ，使用：
+:1,.d 
+或者删除第9行到第200行的内容(先用200G转到第200行) ，使用
+:9,.d  
+删除说明：这是在vi中 ，“.”当前行 ，“1,.”表示从第一行到当前行 ，“d”删除
+
+/******************************************************************/
+
+
+
+/*********************************发布**********************************/
+更新完成以后
+master分支上执行sh online.sh  执行前先更新SVN
+git st //查看更新状态
+/***************************发布到SVN********************************/
+svn co http://192.168.8.245/usvn/svn/w1/trunk w1     //co —checkout
+svn add . --force
+svn commit -m "refs c"
+有冲突的时候执行
+eg.svn resolved static/user/newsMessage/newsMessage_87cb2fe.css
+svn st
+svn ci -m "refs remove"
+rm static/user/newsMessage/newsMessage_87cb2fe.css static/match/widget/football_rank_data/football_rank_data_9db978e.js
+svn up
+
+cd w1/
+cd hybrid/
+cd static/
+svn st //查看更新内容    st——status
+svn up  //每次提交更新一下本地svn  up——update
+/***********************************************************/
+
+发布
+w1_oss #1099
+kqbbs_front_end_stg  #1.1.24  
+推荐帖子BUG修复
+查看全部错位 @Edward Song 
+请发预发布。
+
+前端资源：http://www.test404.com/post-351.html
+
+git 公钥：cat ~/.ssh/id_rsa.pub 
+coding:
+https://coding.net/u/farmanYu/p/Swordfish/git
+nodePPT制作
+
+git clean -f -d 解决git问题
+
+yeoman
+
+fisp 添加书签：
+javascript: void function() {var d = new Date();d.setFullYear(d.getFullYear() + 1);document.cookie='FIS_DEBUG_DATA=4f10e208f47bfb4d35a5e6f115a6df1a;path=/;expires=' + d.toGMTString() + '';location.reload(); }();
+
+离线h5:http://m.ftchinese.com/phone.html
+github：http://nevergiveup-j.github.io/Zepto.refresh/
+前端资源：http://www.test404.com/post-351.html
+atom sftp remote-ftp用法  https://ninghao.net/video/3991
+flash:http://www.cnblogs.com/danielchen/p/1968140.html
+登录账号：念12/Huputest28!   安静向日葵28/Huputest28! 
+离线H5：
+访问 npm run dev 地址：http://localhost:8080/data.html#!/nba 
+
+flexbox布局的兼容性:http://www.tuicool.com/articles/Afq6Bzq
+
+cmder:Windows必备神器Cmder
+
+您获得邮箱帐号：a13461787080@qq.com
+对应QQ号码：2039142894
+mi:zhifubao/zhifubao11
+
+vue  webpack 搭建：http://www.53it.net/show/989.html
+纯净webpack搭建：http://url.pansoso.com/?a=pcurl&u=aHR0cDovL3d3dy5kdWFubGlhbmc5MjAuY29tL2xlYXJuL3dlYjM1My5odG1s&t=V2VicGFja!S5i!KAnOWkmumhtemdouW8gOWPkeKAneacgOS9s!WunuaImC3mrrXkuq7kuKrkurrljZrlrqI=
+
+闭包：http://www.cnblogs.com/dolphinX/archive/2012/09/29/2708763.html
+
+===================正则表达式===========
+g:global全文搜索，不添加，则搜索到第一个匹配停止    eg  var reg = /\bis\b/g  (匹配所有的is)
+i:忽略大小写，默认大小写敏感
+
+json格式化扩展插件：yformater
+
+
+
+星星✨：http://www.jq22.com/yanshi460
+
+
+帝湖东王府
+郑州楼盘：http://zz.fang.anjuke.com/loupan/baojia/
